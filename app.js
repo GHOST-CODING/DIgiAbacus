@@ -4,7 +4,7 @@ let correctAnswers = 0;
 let results = [];
 
 function generateProblem() {
-    if (totalProblems >= 10) {
+    if (totalProblems >= 20) {
         showReport();
         return;
     }
@@ -67,7 +67,7 @@ function checkAnswer() {
 function showReport() {
     const reportDiv = document.getElementById('result');
     reportDiv.innerHTML = `<h2>Report</h2>
-    <p>You answered ${correctAnswers} out of 10 problems correctly.</p>
+    <p>You answered ${correctAnswers} out of 20 problems correctly.</p>
     <ul>${results.map((result, index) => `<li>Problem ${index + 1}: ${result}</li>`).join('')}</ul>
     <button onclick="restart()">Restart</button>`;
 }
