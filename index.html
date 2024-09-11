@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Math Problem Challenge - A fun way to solve math problems!">
+    <title>Math Problem Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Math Problem Challenge</h1>
+        <div id="timer">Time: 0s</div> <!-- Timer display -->
+
+        <button id="start-button" onclick="startChallenge()">Start</button>
+
+        <div class="problem-container" id="problem-container" style="display: none;">
+            <!-- Problems will be generated here -->
+        </div>
+
+        <button id="submit-button" onclick="checkAnswers()" style="display: none;">Submit Answers</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
