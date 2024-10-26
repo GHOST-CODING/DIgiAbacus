@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Math Problem Challenge - A fun way to solve math problems!">
     <title>Math Problem Challenge</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Math Problem Challenge</h1>
-        <div id="timer">Time: 0s</div> <!-- Timer display -->
+        <div id="timer">Time: 0s</div>
 
         <button id="start-button" onclick="startChallenge()">Start</button>
 
-        <div class="problem-container" id="problem-container" style="display: none;">
-            <!-- Problems will be generated here -->
-        </div>
+        <div class="problem-container" id="problem-container" style="display: none;"></div>
 
         <button id="submit-button" onclick="checkAnswers()" style="display: none;">Submit Answers</button>
         <div id="result"></div>
+        
+        <div id="wrong-answers" style="display: none;">
+            <h3>Incorrect Answers:</h3>
+            <div class="wrong-answers-container"></div>
+        </div>
+
+        <button id="restart-button" onclick="restartChallenge()" style="display: none;">Restart</button>
     </div>
 
     <script src="app.js"></script>

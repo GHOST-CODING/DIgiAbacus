@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 80%;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
@@ -26,17 +26,21 @@ h1 {
 }
 
 .problem-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-bottom: 20px;
 }
 
 .problem {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     font-size: 16px;
+}
+
+.expression {
+    text-align: center;
 }
 
 .answer-input {
@@ -66,47 +70,22 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Responsive Design: Mobile View */
-@media only screen and (max-width: 768px) {
-    .problem-container {
-        overflow-x: auto;
-    }
-
-    .problem {
-        min-width: 300px; /* Ensure problems are scrollable on smaller screens */
-    }
-
-    .answer-input {
-        width: 60px;
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 16px;
-        padding: 10px;
-    }
+#wrong-answers {
+    margin-top: 20px;
 }
 
-@media only screen and (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
+.wrong-answers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
 
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    .answer-input {
-        width: 50px;
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 8px;
-    }
+.wrong-answer {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
 }
